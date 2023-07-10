@@ -1,1 +1,2 @@
 # Wall-E-Project
+The purpose of this website is to advertise the goals and accomplishments of the Wall-E project that four UCF students are undertaking. The goal of the project is to create a full-size Wall-E robot that can move similarly to how the movie version of Wall-E does. This website includes information about the project's team, mission, updates, images, and any other relevant information that the team wants to share. 
