@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+    font-size: 35px;
+}
+
+#spacer {
+  height: 1vh;
+  background-color: lightblue;
+}
+
+#home-header {
+  display: flex;
+  align-items: center;
+  /* height: 88vh; */
+  height: 100vh; /* Change back to 88vh when there's content to put under header */
+  background-image: url("./images/WallE_Img_1.jpg");
+  background-position: right 25% top 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#about-header {
+  display: flex;
+  flex-direction: column;
+  height: 88vh;
+  background-image: url("./images/dark_night.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#header-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    /* Change Padding R & L to 10px to get rid of overflow error*/
+    padding: 3vh 10px; /* Large padding which will shrink on scroll (using JS) */
+    transition: 0.06s; /* Adds a transition effect when the padding is decreased */
+    position: fixed; /* Sticky/fixed navbar */
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+.title {
+  color: white;
+  font-size: 48px;
+}
+  
+.website.title {
+  padding: 0 5vh;
+  transition: 5s;
+}
+
+.page.title {
+  margin: auto;
+}
+
+/* Style the navbar links */
+.header-link {
+  color: white;
+  text-decoration: none;
+  float: left;
+  display: block;
+  text-align: center;
+  padding-bottom: 2px;
+  padding-left: 1vh;
+  padding-right: 1vh;
+  margin-right: 1vh;
+  font-size: 18px;
+}
+
+/* Links on mouse-over */
+a:hover {
+color: lightblue;
+}
+
+.current-page {
+  border-bottom: 1px solid;
+}
+
+/* NOTE: 
+      Need to add screensize compatability for really thin screens like the Galaxy Fold, which 
+      has dimensions of 280 x 653
+*/
+
+/* Smallest screensize - about width of a phone */
+@media screen and (max-width: 580px) {
+  #header a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding-top: 10px;
+  }
+  #header-right {
+    float: none;
+  }
+}
+
+/* Medium screen size - about width of Kindle */
+@media screen and (max-width: 700px) {
+  .content-title > p {
+    font-size: 42px !important;
+  } 
+}
+
+/* Large screen size - about width of iPad (vertically) */
+@media screen and (max-width: 970px) {
+  #home-header {
+    align-items: flex-start;
+    padding-top: 10.5vh;
+  }
+  .info-box {
+    flex-wrap: wrap;
+  }
+  .written-info {
+    align-items: center;
+  }
+  .bio{
+    text-align: center;
+  }
+}
+
+.info-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3vh 2vh 3vh 2vh;
+  border-bottom: 2px dashed lightgray;
+}
+
+.headshot {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  padding: 20px 60px;
+  float: left;
+}
+
+.written-info {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.position-title {
+  padding-top: 4px;
+  font-size: 20px;
+  font-style: italic;
+}
+
+div.bio {
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+div.bio > p {
+  font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.lnLink {
+  width: 30px;
+  padding-left: 5px;
+  padding-right:5px;
+}
+
+.emailLink {
+    width: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.ghLink {
+    width: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.split-content {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 65vh;
+}
+
+div.split-content:nth-child(even) {
+  background-image: linear-gradient(285deg, white 50%, #587586 50%);
+  /* 67899c */
+}
+
+div.split-content:nth-child(odd) {
+  background-image: linear-gradient(75deg, white 50%, #94c4e0 50%);
+}
+
+.content-title, .content-text {
+  width: 35%;
+  text-align: center;
+}
+
+.content-title > p {
+  color: white;
+  font-size: 6vw;
+} 
+
+.content-text > p {
+  color: #032838;
+}
